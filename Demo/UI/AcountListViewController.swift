@@ -13,7 +13,8 @@ import RxCocoa
 class AcountListViewController: UITableViewController {
     
     var disposeBag = DisposeBag()
-    var datas = [Acount]()
+    
+    var viewModel = AcountViewModel()
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -23,27 +24,28 @@ class AcountListViewController: UITableViewController {
         super.viewDidLoad()
         
         self.title = "アカウント一覧"
-
         self.view.backgroundColor = UIColor.white
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
+        // アカウント一覧を取得する
+        self.viewModel.requestTwitterAcount {
+            self.tableView.reloadData()
+        }
         
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.datas.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // TableView Cell Bind
+        self.viewModel.acounts.asDriver().drive(tableView.rx.items(cellIdentifier: "Cell", cellType: UITableViewCell.self)) { (row, element, cell) in
+            print(row)
+        cell.textLabel?.text = "\(element.username!)"
+        }.addDisposableTo(self.disposeBag)
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        return cell
-    }
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
+        // TableView Tap
+        self.tableView.rx
+            .itemSelected
+            .subscribe(onNext: { indexPath in
+                self.tableView.deselectRow(at: indexPath, animated: true)
+                
+            })
+            .addDisposableTo(self.disposeBag)
     }
 }
-
