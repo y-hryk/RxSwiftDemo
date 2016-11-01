@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D01E11A61DC72255005C083D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01E11A51DC72255005C083D /* AppDelegate.swift */; };
-		D01E11A81DC72255005C083D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01E11A71DC72255005C083D /* ViewController.swift */; };
-		D01E11AB1DC72255005C083D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01E11A91DC72255005C083D /* Main.storyboard */; };
 		D01E11AD1DC72255005C083D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01E11AC1DC72255005C083D /* Assets.xcassets */; };
 		D01E11B01DC72255005C083D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01E11AE1DC72255005C083D /* LaunchScreen.storyboard */; };
 		D01E11BB1DC72255005C083D /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01E11BA1DC72255005C083D /* DemoTests.swift */; };
@@ -23,6 +21,9 @@
 		D01E11D21DC725E7005C083D /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D01E11D01DC725E7005C083D /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D01E11D41DC725F5005C083D /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01E11D31DC725F5005C083D /* RealmSwift.framework */; };
 		D01E11D51DC725F5005C083D /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D01E11D31DC725F5005C083D /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D01E11DC1DC72B0F005C083D /* Acount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01E11DB1DC72B0F005C083D /* Acount.swift */; };
+		D01E11DE1DC72D03005C083D /* AcountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01E11DD1DC72D03005C083D /* AcountViewModel.swift */; };
+		D01E11E01DC72D31005C083D /* AcountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01E11DF1DC72D31005C083D /* AcountListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +57,6 @@
 /* Begin PBXFileReference section */
 		D01E11A21DC72255005C083D /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01E11A51DC72255005C083D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D01E11A71DC72255005C083D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D01E11AA1DC72255005C083D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D01E11AC1DC72255005C083D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D01E11AF1DC72255005C083D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D01E11B11DC72255005C083D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +68,9 @@
 		D01E11CC1DC72560005C083D /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		D01E11D01DC725E7005C083D /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		D01E11D31DC725F5005C083D /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		D01E11DB1DC72B0F005C083D /* Acount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Acount.swift; path = Demo/Acount.swift; sourceTree = SOURCE_ROOT; };
+		D01E11DD1DC72D03005C083D /* AcountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AcountViewModel.swift; path = Demo/AcountViewModel.swift; sourceTree = SOURCE_ROOT; };
+		D01E11DF1DC72D31005C083D /* AcountListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AcountListViewController.swift; path = Demo/UI/AcountListViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				D01E11A51DC72255005C083D /* AppDelegate.swift */,
-				D01E11A71DC72255005C083D /* ViewController.swift */,
-				D01E11A91DC72255005C083D /* Main.storyboard */,
+				D01E11D81DC7291E005C083D /* UI */,
 				D01E11AC1DC72255005C083D /* Assets.xcassets */,
 				D01E11AE1DC72255005C083D /* LaunchScreen.storyboard */,
 				D01E11B11DC72255005C083D /* Info.plist */,
@@ -137,6 +138,17 @@
 				D01E11BC1DC72255005C083D /* Info.plist */,
 			);
 			path = DemoTests;
+			sourceTree = "<group>";
+		};
+		D01E11D81DC7291E005C083D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D01E11DF1DC72D31005C083D /* AcountListViewController.swift */,
+				D01E11DB1DC72B0F005C083D /* Acount.swift */,
+				D01E11DD1DC72D03005C083D /* AcountViewModel.swift */,
+			);
+			name = UI;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +203,7 @@
 				TargetAttributes = {
 					D01E11A11DC72255005C083D = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 853S365UM8;
 						ProvisioningStyle = Automatic;
 					};
 					D01E11B51DC72255005C083D = {
@@ -226,7 +239,6 @@
 			files = (
 				D01E11B01DC72255005C083D /* LaunchScreen.storyboard in Resources */,
 				D01E11AD1DC72255005C083D /* Assets.xcassets in Resources */,
-				D01E11AB1DC72255005C083D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D01E11A81DC72255005C083D /* ViewController.swift in Sources */,
+				D01E11DC1DC72B0F005C083D /* Acount.swift in Sources */,
+				D01E11DE1DC72D03005C083D /* AcountViewModel.swift in Sources */,
+				D01E11E01DC72D31005C083D /* AcountListViewController.swift in Sources */,
 				D01E11A61DC72255005C083D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,14 +303,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D01E11A91DC72255005C083D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D01E11AA1DC72255005C083D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D01E11AE1DC72255005C083D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -403,14 +409,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 853S365UM8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.-.Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -419,11 +430,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 853S365UM8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.-.Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
