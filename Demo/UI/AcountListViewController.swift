@@ -35,11 +35,12 @@ class AcountListViewController: UITableViewController {
         
         // TableView Cell Bind
         self.viewModel.acounts.asDriver().drive(tableView.rx.items(cellIdentifier: "Cell", cellType: UITableViewCell.self)) { (row, element, cell) in
-            print(row)
+        
         cell.textLabel?.text = "\(element.username!)"
+            
         }.addDisposableTo(self.disposeBag)
         
-        // TableView Tap
+        // TableView Tap Event
         self.tableView.rx
             .itemSelected
             .subscribe(onNext: { indexPath in
@@ -47,5 +48,9 @@ class AcountListViewController: UITableViewController {
                 
             })
             .addDisposableTo(self.disposeBag)
+        
+        
+        let sequesnceFormArray = [1,2]
+        
     }
 }

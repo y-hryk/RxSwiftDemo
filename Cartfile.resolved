@@ -1,2 +1,4 @@
+github "robb/Cartography" "1.0.1"
+github "onevcat/Kingfisher" "3.2.1"
 github "ReactiveX/RxSwift" "3.0.0"
 github "realm/realm-cocoa" "v2.0.2"
