@@ -15,6 +15,7 @@ class AcountListViewController: UITableViewController {
     var disposeBag = DisposeBag()
     
     var viewModel = AcountViewModel()
+    let scrollEndComing = Variable(false)
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -50,7 +51,21 @@ class AcountListViewController: UITableViewController {
             .addDisposableTo(self.disposeBag)
         
         
-        let sequesnceFormArray = [1,2]
+        self.scrollEndComing.asObservable()
+        .subscribe(onNext: {
+            print($0)
+        }).addDisposableTo(disposeBag)
+        
+        
+        self.tableView
+            .rx.contentOffset
+            .asObservable()
+            .map { [unowned self] in
+                print("")
+                return $0.y + 300 >= self.tableView.contentSize.height - self.tableView.bounds.size.height
+            }
+            .bindTo(scrollEndComing)
+            .addDisposableTo(disposeBag)
         
     }
 }

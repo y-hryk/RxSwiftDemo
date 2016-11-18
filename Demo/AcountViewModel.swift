@@ -130,8 +130,23 @@ public class AcountViewModel: NSObject {
                 
             }
             
+//            self.thumbnailImage.kf_setImage(with: URL(string: data.artwork)!,
+//                                            placeholder: nil,
+//                                            options: nil,
+//                                            progressBlock: nil) {[weak self]  (image, error, cacheType, url) in
+//                                                guard let `self` = self else { return }
+//                                                if cacheType != .memory {
+//                                                    UIView.transition(with: `self`.thumbnailImage,
+//                                                                      duration: 0.28,
+//                                                                      options: .transitionCrossDissolve,
+//                                                                      animations: nil, completion: nil)
+//                                                }
+//            }
+
+            
         })
 
     }
     
 }
+
