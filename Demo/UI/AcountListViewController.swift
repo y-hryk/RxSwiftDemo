@@ -30,9 +30,20 @@ class AcountListViewController: UITableViewController {
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
         // アカウント一覧を取得する
-        self.viewModel.requestTwitterAcount {
-            self.tableView.reloadData()
-        }
+//        self.viewModel.requestTwitterAcount {
+//            self.tableView.reloadData()
+//        }
+        
+        self.viewModel.requestTwitterAcounts().subscribe(onNext: { (acounts) in
+            print(acounts)
+        }).addDisposableTo(self.disposeBag)
+        
+        
+        self.viewModel.requestTwitterAcounts()
+        .map { self.viewModel.requestTwitterAllAcountInfo(acounts: $0) }
+        .subscribe(onNext: {
+            print($0)
+        }).addDisposableTo(self.disposeBag)
         
         // TableView Cell Bind
         self.viewModel.acounts.asDriver().drive(tableView.rx.items(cellIdentifier: "Cell", cellType: UITableViewCell.self)) { (row, element, cell) in

@@ -27,6 +27,45 @@ public class AcountViewModel: NSObject {
 //    var followers_count: Observable<Int>
 //    var following: Observable<Int>
     
+    func requestTwitterAcounts() -> Observable<[ACAccount]> {
+        return Observable.create { observer in
+            
+            let accountStore = ACAccountStore()
+            let accountType = accountStore.accountType(withAccountTypeIdentifier: ACAccountTypeIdentifierTwitter)
+            
+            accountStore.requestAccessToAccounts(with: accountType,
+                                                 options: nil)
+            { (granted, error) in
+                
+                // エラー処理
+                if error != nil {
+                    // そのままアラート出せばおk
+                    return
+                }
+                
+                // 認証エラー
+                if !granted {
+                    // アラート表示 設定画面に飛ばしてあげよう
+                    return
+                }
+                
+//                guard let acounts = accountStore.accounts(with: accountType) as? [ACAccount] else {
+//                    // アカウントがないよ。登録してください エラー
+//                    return
+//                }
+                let acounts = accountStore.accounts(with: accountType) as! [ACAccount]
+                if acounts.isEmpty {
+                    // アカウントがないよ。登録してください エラー
+                    return
+                }
+                
+                DispatchQueue.main.sync() { () -> Void in
+                    observer.onNext(acounts)
+                }
+            }
+            return Disposables.create([])
+        }
+    }
     
     func requestTwitterAcount(completion: (() -> Void)?) {
         
@@ -95,7 +134,7 @@ public class AcountViewModel: NSObject {
         })
     }
     
-    fileprivate func requestTwitterAllAcountInfo(acounts: [ACAccount]) {
+    func requestTwitterAllAcountInfo(acounts: [ACAccount]) {
         
         // アカウントが取得できていなければエラー
         if acounts.isEmpty { return }

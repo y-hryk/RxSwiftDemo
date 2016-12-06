@@ -24,6 +24,14 @@
 		D01E11DC1DC72B0F005C083D /* Acount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01E11DB1DC72B0F005C083D /* Acount.swift */; };
 		D01E11DE1DC72D03005C083D /* AcountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01E11DD1DC72D03005C083D /* AcountViewModel.swift */; };
 		D01E11E01DC72D31005C083D /* AcountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01E11DF1DC72D31005C083D /* AcountListViewController.swift */; };
+		D02F82FC1DEE859A00136450 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02F82FB1DEE859A00136450 /* APIRequest.swift */; };
+		D02F82FE1DEE86BF00136450 /* TwitterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02F82FD1DEE86BF00136450 /* TwitterRequest.swift */; };
+		D02F83001DF6674B00136450 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02F82FF1DF6674B00136450 /* ObjectMapper.framework */; };
+		D02F83011DF6674B00136450 /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D02F82FF1DF6674B00136450 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D02F83031DF6679600136450 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02F83021DF6679600136450 /* AlamofireObjectMapper.framework */; };
+		D02F83041DF6679600136450 /* AlamofireObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D02F83021DF6679600136450 /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D02F83061DF667C100136450 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02F83051DF667C100136450 /* Alamofire.framework */; };
+		D02F83071DF667C100136450 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D02F83051DF667C100136450 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D0B1CCDE1DDC68450031BBAA /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B1CCDD1DDC68440031BBAA /* Kingfisher.framework */; };
 		D0B1CCDF1DDC68450031BBAA /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0B1CCDD1DDC68440031BBAA /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D0B1CCE11DDC68590031BBAA /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B1CCE01DDC68590031BBAA /* Cartography.framework */; };
@@ -50,9 +58,12 @@
 				D01E11D21DC725E7005C083D /* Realm.framework in Embed Frameworks */,
 				D0B1CCE21DDC68590031BBAA /* Cartography.framework in Embed Frameworks */,
 				D01E11D51DC725F5005C083D /* RealmSwift.framework in Embed Frameworks */,
+				D02F83071DF667C100136450 /* Alamofire.framework in Embed Frameworks */,
 				D01E11CB1DC7254E005C083D /* RxCocoa.framework in Embed Frameworks */,
+				D02F83041DF6679600136450 /* AlamofireObjectMapper.framework in Embed Frameworks */,
 				D01E11C71DC7253D005C083D /* RxSwift.framework in Embed Frameworks */,
 				D0B1CCDF1DDC68450031BBAA /* Kingfisher.framework in Embed Frameworks */,
+				D02F83011DF6674B00136450 /* ObjectMapper.framework in Embed Frameworks */,
 				D01E11CE1DC72560005C083D /* RxBlocking.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -77,6 +88,11 @@
 		D01E11DB1DC72B0F005C083D /* Acount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Acount.swift; path = Demo/Acount.swift; sourceTree = SOURCE_ROOT; };
 		D01E11DD1DC72D03005C083D /* AcountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AcountViewModel.swift; path = Demo/AcountViewModel.swift; sourceTree = SOURCE_ROOT; };
 		D01E11DF1DC72D31005C083D /* AcountListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AcountListViewController.swift; path = Demo/UI/AcountListViewController.swift; sourceTree = SOURCE_ROOT; };
+		D02F82FB1DEE859A00136450 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		D02F82FD1DEE86BF00136450 /* TwitterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterRequest.swift; sourceTree = "<group>"; };
+		D02F82FF1DF6674B00136450 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		D02F83021DF6679600136450 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
+		D02F83051DF667C100136450 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		D0B1CCDD1DDC68440031BBAA /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		D0B1CCE01DDC68590031BBAA /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = Carthage/Build/iOS/Cartography.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,9 +105,12 @@
 				D01E11D11DC725E7005C083D /* Realm.framework in Frameworks */,
 				D0B1CCE11DDC68590031BBAA /* Cartography.framework in Frameworks */,
 				D01E11D41DC725F5005C083D /* RealmSwift.framework in Frameworks */,
+				D02F83061DF667C100136450 /* Alamofire.framework in Frameworks */,
 				D01E11CA1DC7254E005C083D /* RxCocoa.framework in Frameworks */,
+				D02F83031DF6679600136450 /* AlamofireObjectMapper.framework in Frameworks */,
 				D01E11C61DC7253D005C083D /* RxSwift.framework in Frameworks */,
 				D0B1CCDE1DDC68450031BBAA /* Kingfisher.framework in Frameworks */,
+				D02F83001DF6674B00136450 /* ObjectMapper.framework in Frameworks */,
 				D01E11CD1DC72560005C083D /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +128,9 @@
 		D01E11991DC72255005C083D = {
 			isa = PBXGroup;
 			children = (
+				D02F83051DF667C100136450 /* Alamofire.framework */,
+				D02F83021DF6679600136450 /* AlamofireObjectMapper.framework */,
+				D02F82FF1DF6674B00136450 /* ObjectMapper.framework */,
 				D0B1CCE01DDC68590031BBAA /* Cartography.framework */,
 				D0B1CCDD1DDC68440031BBAA /* Kingfisher.framework */,
 				D01E11D31DC725F5005C083D /* RealmSwift.framework */,
@@ -135,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				D01E11A51DC72255005C083D /* AppDelegate.swift */,
+				D02F82FA1DEE784800136450 /* API */,
 				D01E11D81DC7291E005C083D /* UI */,
 				D01E11AC1DC72255005C083D /* Assets.xcassets */,
 				D01E11AE1DC72255005C083D /* LaunchScreen.storyboard */,
@@ -161,6 +184,15 @@
 			);
 			name = UI;
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D02F82FA1DEE784800136450 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D02F82FB1DEE859A00136450 /* APIRequest.swift */,
+				D02F82FD1DEE86BF00136450 /* TwitterRequest.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +309,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Cartography.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 			);
 			outputPaths = (
 			);
@@ -295,6 +330,8 @@
 				D01E11DE1DC72D03005C083D /* AcountViewModel.swift in Sources */,
 				D01E11E01DC72D31005C083D /* AcountListViewController.swift in Sources */,
 				D01E11A61DC72255005C083D /* AppDelegate.swift in Sources */,
+				D02F82FC1DEE859A00136450 /* APIRequest.swift in Sources */,
+				D02F82FE1DEE86BF00136450 /* TwitterRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
