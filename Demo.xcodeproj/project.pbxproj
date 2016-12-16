@@ -32,6 +32,7 @@
 		D02F83041DF6679600136450 /* AlamofireObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D02F83021DF6679600136450 /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D02F83061DF667C100136450 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02F83051DF667C100136450 /* Alamofire.framework */; };
 		D02F83071DF667C100136450 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D02F83051DF667C100136450 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D02F83091DF6BFFD00136450 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02F83081DF6BFFD00136450 /* ApiResponse.swift */; };
 		D0B1CCDE1DDC68450031BBAA /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B1CCDD1DDC68440031BBAA /* Kingfisher.framework */; };
 		D0B1CCDF1DDC68450031BBAA /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0B1CCDD1DDC68440031BBAA /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D0B1CCE11DDC68590031BBAA /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B1CCE01DDC68590031BBAA /* Cartography.framework */; };
@@ -93,6 +94,7 @@
 		D02F82FF1DF6674B00136450 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		D02F83021DF6679600136450 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
 		D02F83051DF667C100136450 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		D02F83081DF6BFFD00136450 /* ApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		D0B1CCDD1DDC68440031BBAA /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		D0B1CCE01DDC68590031BBAA /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = Carthage/Build/iOS/Cartography.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				D02F82FB1DEE859A00136450 /* APIRequest.swift */,
+				D02F83081DF6BFFD00136450 /* ApiResponse.swift */,
 				D02F82FD1DEE86BF00136450 /* TwitterRequest.swift */,
 			);
 			path = API;
@@ -329,6 +332,7 @@
 				D01E11DC1DC72B0F005C083D /* Acount.swift in Sources */,
 				D01E11DE1DC72D03005C083D /* AcountViewModel.swift in Sources */,
 				D01E11E01DC72D31005C083D /* AcountListViewController.swift in Sources */,
+				D02F83091DF6BFFD00136450 /* ApiResponse.swift in Sources */,
 				D01E11A61DC72255005C083D /* AppDelegate.swift in Sources */,
 				D02F82FC1DEE859A00136450 /* APIRequest.swift in Sources */,
 				D02F82FE1DEE86BF00136450 /* TwitterRequest.swift in Sources */,
